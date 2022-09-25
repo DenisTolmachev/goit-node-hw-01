@@ -17,7 +17,7 @@ const contacts = require("./contacts");
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
     case "list":
-      allContacts = await contacts.listContacts();
+      const allContacts = await contacts.listContacts();
       console.table(allContacts);
       break;
 
