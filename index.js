@@ -27,12 +27,13 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       break;
 
     case "add":
-      const newContact = await contacts.addContact({ name, email, phone });
+      const newContact = await contacts.addContact(name, email, phone );
       console.table(newContact);
       break;
 
     case "remove":
-      // ... id
+      const deleteContact = await contacts.removeContact(id)
+      console.table(deleteContact);
       break;
 
     default:
@@ -42,8 +43,6 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
 
 // invokeAction(argv);
 invokeAction({
-  action: "add",
-  name: "Holly Molly",
-  email: "exanple@example.net",
-  phone: "(111) 111-1111",
+  action: "remove",
+  id: "11"
 });
