@@ -1,0 +1,10 @@
+[
+    {
+    name: "Denis",
+    role: "Admin"
+    },
+    {
+        name: "Bob",
+        role: "User"
+    }
+]
